@@ -1,7 +1,5 @@
 package com.yyc.learnLeetcode.learnAlgorithms.a1480;
 
-import java.util.ArrayList;
-
 /**
  * Running Sum of 1d Array
  *
