@@ -16,5 +16,7 @@ class SolutionTest {
         int excepted = 3;
         int actual = solution.numJewelsInStones(J, S);
         assertEquals(excepted, actual);
+        int actual2 = solution.numJewelsInStonesWithASCII(J, S);
+        assertEquals(excepted, actual2);
     }
 }

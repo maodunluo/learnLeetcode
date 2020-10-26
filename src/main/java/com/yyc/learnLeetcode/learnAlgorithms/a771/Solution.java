@@ -18,4 +18,22 @@ public class Solution {
         }
         return result;
     }
+
+    /**
+     * this method is using the ASCII to count which
+     * @param J Jewels
+     * @param S Jewels
+     * @return the count of jewels
+     */
+    public int numJewelsInStonesWithASCII(String J, String S) {
+        int result = 0;
+        int[] cnt = new int[128];
+        for (char c : S.toCharArray()) {
+            cnt[c]++;
+        }
+        for (char c : J.toCharArray()) {
+            result += cnt[c];
+        }
+        return result;
+    }
 }
