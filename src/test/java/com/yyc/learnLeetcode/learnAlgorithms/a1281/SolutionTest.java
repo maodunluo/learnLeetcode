@@ -8,6 +8,6 @@ class SolutionTest {
 
     @Test
     void subtractProductAndSum() {
-        assertEquals(15, new Solution().subtractProductAndSum(234));;
+        assertEquals(15, new Solution().subtractProductAndSum(234));
     }
 }
