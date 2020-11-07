@@ -1,8 +1,6 @@
 package com.yyc.learnLeetcode.learnAlgorithms.a804;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 
 /**
  * Unique Morse Code Words，第一次用的是枚举类，但是应该怎么调用？
