@@ -2,6 +2,7 @@ package com.yyc.learnLeetcode.learnAlgorithms.a1640;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SolutionTest {
@@ -12,8 +13,8 @@ class SolutionTest {
     int[] arr2 = new int[]{15, 88};
     int[][] pieces2 = new int[][]{{88}, {15}};
 
-    //int[] arr3 = new int[]{49, 18, 16};
-    //int[][] pieces3 = new int[][]{{16, 18, 49}};
+    int[] arr3 = new int[]{49, 18, 16};
+    int[][] pieces3 = new int[][]{{16, 18, 49}};
 
     int[] arr4 = new int[]{91, 4, 64, 78};
     int[][] pieces4 = new int[][]{{78}, {4, 64}, {91}};
@@ -25,7 +26,7 @@ class SolutionTest {
     void canFormArray() {
         assertTrue(verifyAnswer(arr1, pieces1));
         assertTrue(verifyAnswer(arr2, pieces2));
-        //assertTrue(verifyAnswer(arr3, pieces3));
+        assertFalse(verifyAnswer(arr3, pieces3));
         assertTrue(verifyAnswer(arr4, pieces4));
     }
 
