@@ -92,6 +92,12 @@ class SolutionTest {
         assertEquals(EXPECTED, sortStringWithTreeMap(INPUT));
     }
 
+    /**
+     * 对字符串排序，格式为上升下降,使用treeMap，可以进行排序
+     *
+     * @param s 传入字符串
+     * @return 排序过的字符串
+     */
     private String sortStringWithTreeMap(String s) {
         TreeMap<Character, Integer> treeMap = new TreeMap<>();
         for (char c : s.toCharArray()) {
@@ -109,7 +115,4 @@ class SolutionTest {
         }
         return result.toString();
     }
-
-
-
 }
