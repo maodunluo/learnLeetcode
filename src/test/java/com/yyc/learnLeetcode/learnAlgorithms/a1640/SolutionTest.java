@@ -24,13 +24,13 @@ class SolutionTest {
 
     @Test
     void canFormArray() {
-        assertTrue(verifyAnswer(arr1, pieces1));
-        assertTrue(verifyAnswer(arr2, pieces2));
-        assertFalse(verifyAnswer(arr3, pieces3));
-        assertTrue(verifyAnswer(arr4, pieces4));
+        assertTrue(complexFormArray(arr1, pieces1));
+        assertTrue(complexFormArray(arr2, pieces2));
+        assertFalse(complexFormArray(arr3, pieces3));
+        assertTrue(complexFormArray(arr4, pieces4));
     }
 
-    boolean verifyAnswer(int[] arr1, int[][] pieces1) {
+    boolean complexFormArray(int[] arr1, int[][] pieces1) {
         for (int[] pieces : pieces1) {
             //把一个的都通过
             if (pieces.length == 1) {
@@ -62,6 +62,34 @@ class SolutionTest {
                 if (pieces[i] != arr1[samePieceInArrIndex + i]) {
                     return false;
                 }
+            }
+        }
+        return true;
+    }
+
+    @Test
+    void canFormArrayForStringBuilder() {
+        assertTrue(useStringBuilder(arr1, pieces1));
+        assertTrue(useStringBuilder(arr2, pieces2));
+        assertFalse(useStringBuilder(arr3, pieces3));
+        assertTrue(useStringBuilder(arr4, pieces4));
+    }
+
+    boolean useStringBuilder(int[] arr, int[][] pieces) {
+        StringBuilder arrStringBuilder = new StringBuilder();
+        for (int arrElement : arr) {
+            arrStringBuilder.append(arrElement);
+            arrStringBuilder.append("#");
+        }
+
+        for (int[] piece : pieces) {
+            StringBuilder piecesStringBuilder = new StringBuilder();
+            for (int number : piece) {
+                piecesStringBuilder.append(number);
+                piecesStringBuilder.append("#");
+            }
+            if (!arrStringBuilder.toString().contains(piecesStringBuilder.toString())) {
+                return false;
             }
         }
         return true;
