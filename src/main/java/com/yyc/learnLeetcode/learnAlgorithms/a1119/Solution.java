@@ -7,10 +7,14 @@ public class Solution {
     private String removeVowels(String S) {
         StringBuilder result = new StringBuilder();
         for (char c : S.toCharArray()) {
-            if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u') {
+            if (vowel(c)) {
                 result.append(c);
             }
         }
         return result.toString();
+    }
+
+    private boolean vowel(char c) {
+        return (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u');
     }
 }
