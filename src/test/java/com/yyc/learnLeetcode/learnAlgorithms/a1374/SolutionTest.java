@@ -9,7 +9,7 @@ class SolutionTest {
     @Test
     void generateTheStringTest() {
         String expected = "aaab";
-        assertEquals(expected, generateTheString(4));
+        assertEquals(expected, new Solution().generateTheString(4));
     }
 
     public String generateTheString(int n) {
