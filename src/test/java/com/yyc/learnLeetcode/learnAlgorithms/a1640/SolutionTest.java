@@ -28,6 +28,7 @@ class SolutionTest {
         assertTrue(complexFormArray(arr2, pieces2));
         assertFalse(complexFormArray(arr3, pieces3));
         assertTrue(complexFormArray(arr4, pieces4));
+        assertTrue(new Solution().canFormArray(arr4, pieces4));
     }
 
     boolean complexFormArray(int[] arr1, int[][] pieces1) {

@@ -14,7 +14,7 @@ class SolutionTest {
 
     @Test
     void sortStringTest() {
-        assertEquals(EXPECTED, sortString(INPUT));
+        assertEquals(EXPECTED, new Solution().sortString(INPUT));
     }
 
     /**

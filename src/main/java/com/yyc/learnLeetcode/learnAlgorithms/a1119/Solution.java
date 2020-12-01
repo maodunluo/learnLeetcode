@@ -4,7 +4,7 @@ package com.yyc.learnLeetcode.learnAlgorithms.a1119;
  * @author yuechao
  */
 public class Solution {
-    private String removeVowels(String S) {
+    public String removeVowels(String S) {
         StringBuilder result = new StringBuilder();
         for (char c : S.toCharArray()) {
             if (vowel(c)) {

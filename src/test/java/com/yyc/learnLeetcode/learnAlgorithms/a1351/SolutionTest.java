@@ -9,7 +9,7 @@ class SolutionTest {
     @Test
     void countNegativesTest() {
         int[][] grid = new int[][]{{4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3}};
-        assertEquals(8, countNegatives(grid));
+        assertEquals(8, new Solution().countNegatives(grid));
     }
 
     public int countNegatives(int[][] grid) {

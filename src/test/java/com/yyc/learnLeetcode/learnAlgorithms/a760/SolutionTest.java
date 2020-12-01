@@ -11,7 +11,7 @@ class SolutionTest {
         int[] A = new int[]{12, 28, 46, 32, 50};
         int[] B = new int[]{50, 12, 32, 46, 28};
         int[] expected = new int[]{1, 4, 3, 2, 0};
-        assertArrayEquals(expected, anagramMappings(A, B));
+        assertArrayEquals(expected, new Solution().anagramMappings(A, B));
     }
 
     public int[] anagramMappings(int[] A, int[] B) {

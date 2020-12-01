@@ -58,4 +58,16 @@ class SolutionTest {
         return result.toString();
     }
 
+    @Test
+    void arrayStringsAreEqualTest() {
+        assertTrue(new Solution().arrayStringsAreEqual(words1, words2));
+    }
+
+    @Test
+    void arrayStringsAreEqualByStringBuilder() {
+        assertTrue(new Solution().arrayStringsAreEqualByStringBuilder(words1, words2));
+    }
+
+
+
 }

@@ -14,7 +14,7 @@ class SolutionTest {
 
     @Test
     void flipAndInvertImage() {
-        assertArrayEquals(result, flipAndInvertImage(arrays));
+        assertArrayEquals(result, new Solution().flipAndInvertImage(arrays));
     }
 
     public int[][] flipAndInvertImage(int[][] A) {

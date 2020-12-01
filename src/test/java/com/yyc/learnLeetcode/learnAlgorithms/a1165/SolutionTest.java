@@ -12,7 +12,8 @@ class SolutionTest {
     void calculateTimeTest() {
         String keyboard = "abcdefghijklmnopqrstuvwxyz";
         String word = "cba";
-        assertEquals(4, calculateTime(keyboard, word));
+        Solution solution = new Solution();
+        assertEquals(4, solution.calculateTime(keyboard, word));
     }
 
     @Test

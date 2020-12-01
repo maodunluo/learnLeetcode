@@ -10,7 +10,7 @@ class SolutionTest {
     void removeVowelsTest() {
         String input = "leetcodeisacommunityforcoders";
         String expected = "ltcdscmmntyfrcdrs";
-        assertEquals(expected, removeVowels(input));
+        assertEquals(expected, new Solution().removeVowels(input));
     }
 
     private String removeVowels(String S) {
