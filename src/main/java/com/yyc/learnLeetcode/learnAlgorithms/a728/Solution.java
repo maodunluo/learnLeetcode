@@ -18,7 +18,6 @@ public class Solution {
     }
 
     public boolean verifySelfDividingNumber(int number) {
-        //如何得到各个位数上的值。
         if (number < 10) {
             return true;
         }
