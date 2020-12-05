@@ -11,33 +11,33 @@ public class Solution {
      * 左侧的节点小于根节点并且根结点小于右侧节点，可以利用这个属性来优化
      *
      * @param root 根结点
-     * @param L    最小值
-     * @param R    最大值
+     * @param left    最小值
+     * @param right    最大值
      * @return 这区间内的和
      */
-    public int rangeSumBST(TreeNode root, int L, int R) {
+    public int rangeSumBST(TreeNode root, int left, int right) {
         if (root == null) {
             return 0;
         }
         int result = 0;
-        if (L <= root.val && root.val <= R) {
+        if (left <= root.val && root.val <= right) {
             result += root.val;
         }
-        result += rangeSumBST(root.left, L, R);
-        result += rangeSumBST(root.right, L, R);
+        result += rangeSumBST(root.left, left, right);
+        result += rangeSumBST(root.right, left, right);
         return result;
     }
 
-    public int simpleRangeSumBST(TreeNode root, int L, int R) {
+    public int simpleRangeSumBST(TreeNode root, int left, int right) {
         if (root == null) {
             return 0;
         }
-        if (root.val < L) {
-            return simpleRangeSumBST(root.right, L, R);
-        } else if (root.val > R) {
-            return simpleRangeSumBST(root.left, L, R);
+        if (root.val < left) {
+            return simpleRangeSumBST(root.right, left, right);
+        } else if (root.val > right) {
+            return simpleRangeSumBST(root.left, left, right);
         } else {
-            return root.val + simpleRangeSumBST(root.right, L, R) + simpleRangeSumBST(root.left, L, R);
+            return root.val + simpleRangeSumBST(root.right, left, right) + simpleRangeSumBST(root.left, left, right);
         }
     }
 }

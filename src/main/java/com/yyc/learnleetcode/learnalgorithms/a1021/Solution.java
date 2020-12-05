@@ -6,12 +6,12 @@ package com.yyc.learnleetcode.learnalgorithms.a1021;
  * @author yuechao
  */
 public class Solution {
-    public String removeOuterParentheses(String S) {
+    public String removeOuterParentheses(String input) {
         int count = 0;
         int flag = 0;
-        StringBuilder builder = new StringBuilder(S);
-        for (int i = S.length() - 1; i >= 0; i--) {
-            if (S.charAt(i) == ')') {
+        StringBuilder builder = new StringBuilder(input);
+        for (int i = input.length() - 1; i >= 0; i--) {
+            if (input.charAt(i) == ')') {
                 count++;
             } else {
                 count--;

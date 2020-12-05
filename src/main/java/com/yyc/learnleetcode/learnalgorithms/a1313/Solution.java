@@ -10,7 +10,7 @@ import java.util.Arrays;
  */
 public class Solution {
     private static final int GAP = 2;
-    public int[] decompressRLElist(int[] nums) {
+    public int[] decompressRLEList(int[] nums) {
         int arraySize = 0;
         for (int i = 0; i < nums.length; i += GAP) {
             arraySize += nums[i];
@@ -31,7 +31,7 @@ public class Solution {
         return result;
     }
 
-    public int[] decompressRLElist2(int[] nums) {
+    public int[] decompressRLEList2(int[] nums) {
         int arraySize = 0;
         for (int i = 0; i < nums.length; i += GAP) {
             arraySize += nums[i];

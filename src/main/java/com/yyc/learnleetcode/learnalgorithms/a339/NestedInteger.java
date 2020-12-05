@@ -3,7 +3,9 @@ package com.yyc.learnleetcode.learnalgorithms.a339;
 
 import java.util.List;
 
-// This is the interface that allows for creating nested lists.
+/**
+ * @author yuechao
+ */ // This is the interface that allows for creating nested lists.
  // You should not implement it, or speculate about its implementation
  public interface NestedInteger {
      // Constructor initializes an empty nested list.

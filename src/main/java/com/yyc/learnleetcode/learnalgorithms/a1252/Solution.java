@@ -27,8 +27,10 @@ public class Solution {
     // Java把符号“^”放在两个布尔变量之间，表示这里进行“异或”运算。
     // 初始化一个boolean数组，其初始值都是false。
     public int oddCells2(int n, int m, int[][] indices) {
-        boolean[] oddRows = new boolean[n], oddCols = new boolean[m];
-        int cntCol = 0, cntRow = 0;
+        boolean[] oddRows = new boolean[n];
+        boolean[] oddCols = new boolean[m];
+        int cntCol = 0;
+        int cntRow = 0;
         for (int[] idx : indices) {
             // if row idx[0] appears odd times, it will correspond to true.
             oddRows[idx[0]] ^= true;

@@ -33,29 +33,29 @@ public enum Morse {
     Z('z', "--..")
     ;
     char character;
-    String morse;
+    String morseInChar;
 
     Morse() {
     }
 
     Morse(char character, String morse) {
         this.character = character;
-        this.morse = morse;
+        this.morseInChar = morse;
     }
 
     public char getCharacter() {
         return character;
     }
 
-    public void setCharacter(char character) {
+    void setCharacter(char character) {
         this.character = character;
     }
 
     public String getMorse() {
-        return morse;
+        return morseInChar;
     }
 
-    public void setMorse(String morse) {
-        this.morse = morse;
+    void setMorse(String morse) {
+        this.morseInChar = morse;
     }
 }

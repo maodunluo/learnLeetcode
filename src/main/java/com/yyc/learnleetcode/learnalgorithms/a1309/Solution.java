@@ -29,7 +29,7 @@ public class Solution {
             if (i < chars.length - 2 && chars[i + 2] == '#') {
                 char c = (char) (((chars[i] - '1') * 10 + chars[i + 1] - '0') + 'j');
                 builder.append(c);
-                i += 2;
+                i = i + 2;
                 continue;
             }
             builder.append((char) ((chars[i] - '1') + 'a'));

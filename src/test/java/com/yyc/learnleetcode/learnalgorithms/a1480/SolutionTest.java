@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SolutionTest {
     @Test
     @DisplayName("Running Sum of 1d Array")
-    public void test1() {
+    void test1() {
         int[] sums = {1, 2, 3, 4};
         Solution solution = new Solution();
         int[] results = solution.runningSum(sums);
