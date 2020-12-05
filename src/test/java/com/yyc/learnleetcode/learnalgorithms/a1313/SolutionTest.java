@@ -11,8 +11,8 @@ class SolutionTest {
         Solution solution = new Solution();
         int[] nums = {1,2,3,4};
         int[] excepted = {2,4,4,4};
-        int[] actual = solution.decompressRLEList(nums);
-        int[] actual2 = solution.decompressRLEList2(nums);
+        int[] actual = solution.decompressRleList(nums);
+        int[] actual2 = solution.decompressRleList2(nums);
         assertArrayEquals(excepted, actual);
         assertArrayEquals(excepted, actual2);
 

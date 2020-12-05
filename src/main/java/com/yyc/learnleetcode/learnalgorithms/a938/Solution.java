@@ -15,7 +15,7 @@ public class Solution {
      * @param right    最大值
      * @return 这区间内的和
      */
-    public int rangeSumBST(TreeNode root, int left, int right) {
+    public int rangeSumBst(TreeNode root, int left, int right) {
         if (root == null) {
             return 0;
         }
@@ -23,21 +23,21 @@ public class Solution {
         if (left <= root.val && root.val <= right) {
             result += root.val;
         }
-        result += rangeSumBST(root.left, left, right);
-        result += rangeSumBST(root.right, left, right);
+        result += rangeSumBst(root.left, left, right);
+        result += rangeSumBst(root.right, left, right);
         return result;
     }
 
-    public int simpleRangeSumBST(TreeNode root, int left, int right) {
+    public int simpleRangeSumBst(TreeNode root, int left, int right) {
         if (root == null) {
             return 0;
         }
         if (root.val < left) {
-            return simpleRangeSumBST(root.right, left, right);
+            return simpleRangeSumBst(root.right, left, right);
         } else if (root.val > right) {
-            return simpleRangeSumBST(root.left, left, right);
+            return simpleRangeSumBst(root.left, left, right);
         } else {
-            return root.val + simpleRangeSumBST(root.right, left, right) + simpleRangeSumBST(root.left, left, right);
+            return root.val + simpleRangeSumBst(root.right, left, right) + simpleRangeSumBst(root.left, left, right);
         }
     }
 }

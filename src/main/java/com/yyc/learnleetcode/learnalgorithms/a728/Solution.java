@@ -7,6 +7,8 @@ import java.util.List;
  * @author yuechao
  */
 public class Solution {
+    private static final int TEN = 10;
+
     public List<Integer> selfDividingNumbers(int left, int right) {
         List<Integer> numberLists = new LinkedList<>();
         for (int i = left; i <= right; i++) {
@@ -17,8 +19,8 @@ public class Solution {
         return numberLists;
     }
 
-    public boolean verifySelfDividingNumber(int number) {
-        if (number < 10) {
+    private boolean verifySelfDividingNumber(int number) {
+        if (number < TEN) {
             return true;
         }
         int flag = number;

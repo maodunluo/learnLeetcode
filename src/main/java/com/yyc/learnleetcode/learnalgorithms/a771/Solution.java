@@ -25,7 +25,7 @@ public class Solution {
      * @param stones Jewels
      * @return the count of jewels
      */
-    public int numJewelsInStonesWithASCII(String jewels, String stones) {
+    public int numJewelsInStonesWithAscii(String jewels, String stones) {
         int result = 0;
         int[] cnt = new int[128];
         for (char c : stones.toCharArray()) {
