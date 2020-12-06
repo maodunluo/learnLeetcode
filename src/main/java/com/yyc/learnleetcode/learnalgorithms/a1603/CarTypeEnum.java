@@ -29,7 +29,7 @@ public enum CarTypeEnum {
         return carType;
     }
 
-    public void setCarType(String carType) {
+    void setCarType(String carType) {
         this.carType = carType;
     }
 
@@ -37,7 +37,7 @@ public enum CarTypeEnum {
         return carTypeNum;
     }
 
-    public void setCarTypeNum(int carTypeNum) {
+    void setCarTypeNum(int carTypeNum) {
         this.carTypeNum = carTypeNum;
     }
 }

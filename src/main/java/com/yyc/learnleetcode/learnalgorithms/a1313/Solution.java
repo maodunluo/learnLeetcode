@@ -10,7 +10,7 @@ import java.util.Arrays;
  */
 public class Solution {
     private static final int GAP = 2;
-    public int[] decompressRLElist(int[] nums) {
+    public int[] decompressRleList(int[] nums) {
         int arraySize = 0;
         for (int i = 0; i < nums.length; i += GAP) {
             arraySize += nums[i];
@@ -24,14 +24,13 @@ public class Solution {
                 result[pos] = j;
                 pos++;
             }
-            //也可以用下面这个来进行数组元素赋值，和上面的原理是一样的
-//            Arrays.fill(result, pos, pos + nums[i], nums[i + 1]);
+//            也可以用Arrays.fill(result, pos, pos + nums[i], nums[i + 1]);
 //            pos += nums[i];
         }
         return result;
     }
 
-    public int[] decompressRLElist2(int[] nums) {
+    public int[] decompressRleList2(int[] nums) {
         int arraySize = 0;
         for (int i = 0; i < nums.length; i += GAP) {
             arraySize += nums[i];

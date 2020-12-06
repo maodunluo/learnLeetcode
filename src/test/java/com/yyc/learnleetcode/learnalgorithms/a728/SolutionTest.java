@@ -34,19 +34,4 @@ class SolutionTest {
         assertEquals(expected, new Solution().selfDividingNumbers(1, 22));
 
     }
-
-    @Test
-    void verifySelfDividingNumber() {
-        assertFalse(new Solution().verifySelfDividingNumber(21));
-    }
-
-    @Test
-    void verifySelfDividingNumber10() {
-        assertFalse(new Solution().verifySelfDividingNumber(10));
-    }
-
-    @Test
-    void verifySelfDividingNumber707() {
-        assertFalse(new Solution().verifySelfDividingNumber(707));
-    }
 }

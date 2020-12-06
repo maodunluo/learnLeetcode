@@ -19,6 +19,6 @@ class SolutionTest {
     @Test
     void test1() {
         int[] initArray = {2,5,1,3,4,7};
-        System.out.println(initArray[0]);
+        assertEquals(2, initArray[0] );
     }
 }

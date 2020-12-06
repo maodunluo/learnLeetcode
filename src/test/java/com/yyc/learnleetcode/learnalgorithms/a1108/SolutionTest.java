@@ -9,6 +9,6 @@ class SolutionTest {
     @Test
     void defangIPaddr() {
         Solution solution = new Solution();
-        assertEquals("1[.]1[.]1[.]1", solution.defangIPaddr("1.1.1.1"));
+        assertEquals("1[.]1[.]1[.]1", solution.defangIpAddr("1.1.1.1"));
     }
 }

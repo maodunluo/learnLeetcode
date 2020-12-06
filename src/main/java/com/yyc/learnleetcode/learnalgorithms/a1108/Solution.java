@@ -8,7 +8,7 @@ package com.yyc.learnleetcode.learnalgorithms.a1108;
  * @author yuechao
  */
 public class Solution {
-    public String defangIPaddr(String address) {
+    public String defangIpAddr(String address) {
         return address.replace(".", "[.]");
     }
 }

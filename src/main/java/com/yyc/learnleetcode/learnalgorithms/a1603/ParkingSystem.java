@@ -1,5 +1,7 @@
 package com.yyc.learnleetcode.learnalgorithms.a1603;
 
+import java.util.logging.Logger;
+
 /**
  * Your ParkingSystem object will be instantiated and called as such:
  * ParkingSystem obj = new ParkingSystem(big, medium, small);
@@ -42,17 +44,8 @@ public class ParkingSystem {
                 small--;
                 return true;
             default:
-                System.out.println("the carType is incorrect");
+                Logger.getLogger("the carType is incorrect");
                 return false;
         }
     }
-
-//    int[] count;
-//    public ParkingSystem(int big, int medium, int small) {
-//        count = new int[]{big, medium, small};
-//    }
-//    public boolean addCar(int carType) {
-//        return count[carType - 1] -- > 0;
-//    }
-
 }

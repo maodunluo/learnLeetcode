@@ -14,12 +14,12 @@ class SolutionTest {
     TreeNode nodeVal110 = new TreeNode(10, nodeVal5, nodeVal15);
 
     @Test
-    void rangeSumBST() {
-        assertEquals(32, new Solution().rangeSumBST(nodeVal110, 7, 15));
+    void rangeSumBst() {
+        assertEquals(32, new Solution().rangeSumBst(nodeVal110, 7, 15));
     }
 
     @Test
-    void simpleRangeSumBST() {
-        assertEquals(32, new Solution().simpleRangeSumBST(nodeVal110, 7, 15));
+    void simpleRangeSumBst() {
+        assertEquals(32, new Solution().simpleRangeSumBst(nodeVal110, 7, 15));
     }
 }

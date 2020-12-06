@@ -4,8 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 class SolutionTest {
 
+    int[] expected = new int[]{1, 2, 3, 4, -10};
     @Test
     void sumZero() {
         int n = 5;
@@ -16,6 +19,6 @@ class SolutionTest {
             sum+=result[i];
         }
         result[n - 1] = -sum;
-        System.out.println(Arrays.toString(result));
+        assertArrayEquals(expected, result);
     }
 }

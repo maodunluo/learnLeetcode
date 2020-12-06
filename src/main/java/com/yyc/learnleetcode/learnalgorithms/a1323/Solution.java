@@ -7,8 +7,9 @@ package com.yyc.learnleetcode.learnalgorithms.a1323;
  */
 public class Solution {
     private static final int BASE = 10;
-    public int maximum69Number (int num) {
-        int digits = 1;
+
+    public int maximum69Number(int num) {
+        double digits = 1;
         //flag用来计算位数
         int flag = num;
         //用来计算哪一位是6
@@ -18,7 +19,7 @@ public class Solution {
             flag /= 10;
         }
         while (digits != 0) {
-            int v = (int)(flag2 / Math.pow(10, digits - 1));
+            int v = (int) (flag2 / Math.pow(10, (digits - 1)));
             flag2 -= v * Math.pow(10, digits - 1);
             if (v == 6) {
                 num += 3 * Math.pow(10, digits - 1);
