@@ -28,7 +28,8 @@ public class Solution {
     /**
      *
      * 这个要保持函数没有副作用，就不能用result = arr，因为上述赋值就会将result指向arr的地址，是浅拷贝，
-     * 修改result的话，arr里面的数值也会变化。可以用以下语句进行深拷贝。要确保它们对数据结构的任何修改对于调用者都是不可见的。
+     * 修改result的话，arr里面的数值也会变化。要确保它们对数据结构的任何修改对于调用者都是不可见的。
+     * Arrays.copyOf(arr, arr.length)也是浅拷贝。当数组里面存放的是对象时修改一处两个数组都会发生变化。
      *
      * @param arr 传入的input数组
      * @return 排序后的数组
