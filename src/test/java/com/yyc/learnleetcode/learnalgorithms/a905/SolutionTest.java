@@ -1,5 +1,6 @@
 package com.yyc.learnleetcode.learnalgorithms.a905;
 
+import org.apache.commons.lang3.SerializationUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -66,6 +67,21 @@ class SolutionTest {
         Dog Amy = new Dog("Amy", 20);
         Dog[] dogArr = {kitty, Amy};
         Dog[] dogArrCopy = Arrays.copyOf(dogArr, dogArr.length);
+        System.out.println("stringArrCopy指向的地址:" + dogArr);
+        System.out.println("stringArrCopy2指向的地址:" + dogArrCopy);
+        dogArrCopy[0].setAge(21);
+        System.out.println(Arrays.toString(dogArr));
+        System.out.println(Arrays.toString(dogArrCopy));
+        assertNotEquals(dogArr, dogArrCopy);
+    }
+
+    @Test
+    @DisplayName("校验对象数组,用SerializationUtils")
+    void cloneObjectArrTest() {
+        Dog kitty = new Dog("kitty", 18);
+        Dog Amy = new Dog("Amy", 20);
+        Dog[] dogArr = {kitty, Amy};
+        Dog[] dogArrCopy = SerializationUtils.clone(dogArr);
         System.out.println("stringArrCopy指向的地址:" + dogArr);
         System.out.println("stringArrCopy2指向的地址:" + dogArrCopy);
         dogArrCopy[0].setAge(21);
