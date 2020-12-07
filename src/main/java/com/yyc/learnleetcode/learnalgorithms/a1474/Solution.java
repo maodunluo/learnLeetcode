@@ -1,6 +1,5 @@
 package com.yyc.learnleetcode.learnalgorithms.a1474;
 
-import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang3.SerializationUtils;
 
 /**
