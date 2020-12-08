@@ -1,6 +1,11 @@
 package com.yyc.learnleetcode.learnalgorithms.a905;
 
-public class Dog {
+import java.io.Serializable;
+
+public class Dog implements Serializable {
+
+    private static final long serialVersionUID = -7689020475298042321L;
+
     String name;
     int age;
 
