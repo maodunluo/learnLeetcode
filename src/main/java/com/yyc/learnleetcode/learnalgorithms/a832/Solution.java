@@ -1,6 +1,7 @@
 package com.yyc.learnleetcode.learnalgorithms.a832;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
  * @author yuechao
@@ -8,8 +9,7 @@ import java.util.Stack;
 public class Solution {
     public int[][] flipAndInvertImage(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
-            //用stack性能特别差
-            Stack<Integer> stack = new Stack<>();
+            Deque<Integer> stack = new ArrayDeque<>();
             for (int j = 0; j < arr[i].length; j++) {
                 stack.push(arr[i][j]);
             }

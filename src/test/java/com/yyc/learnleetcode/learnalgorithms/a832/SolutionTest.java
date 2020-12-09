@@ -2,6 +2,8 @@ package com.yyc.learnleetcode.learnalgorithms.a832;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,7 +20,7 @@ class SolutionTest {
 
     public int[][] flipAndInvertImage(int[][] A) {
         for (int i = 0; i < A.length; i++) {
-            Stack<Integer> stack = new Stack<>();
+            Deque<Integer> stack = new ArrayDeque<>();
             for (int j = 0; j < A[i].length; j++) {
                 stack.push(A[i][j]);
             }
