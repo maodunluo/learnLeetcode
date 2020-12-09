@@ -17,8 +17,10 @@ public class Solution {
         if (root == null) {
             return result;
         }
-        for (Node child : root.children) {
-            result.addAll(postorder(child));
+        if (!CollectionUtils.isEmpty(root.children)) {
+            for (Node child : root.children) {
+                result.addAll(postorder(child));
+            }
         }
         result.add(root.val);
         return result;
@@ -41,6 +43,29 @@ public class Solution {
             }
         }
         Collections.reverse(result);
+        return result;
+    }
+
+    public List<Integer> postOrderUseDeque(Node root) {
+        List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+        Deque<Node> stack = new ArrayDeque<>();
+        Deque<Node> deque = new ArrayDeque<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            root = stack.pop();
+            deque.push(root);
+            if (!CollectionUtils.isEmpty(root.children)) {
+                for (Node node : root.children) {
+                    stack.push(node);
+                }
+            }
+        }
+        for (Node node : deque) {
+            result.add(node.val);
+        }
         return result;
     }
 }

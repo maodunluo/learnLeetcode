@@ -1,4 +1,4 @@
-package com.yyc.learnleetcode.learnalgorithms.a590;
+package com.yyc.learnleetcode.learnalgorithms.a589;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SolutionTest {
-
     Node node1 = new Node();
     Node node2 = new Node();
     Node node3 = new Node();
@@ -34,26 +33,21 @@ class SolutionTest {
         node1.children.add(node2);
         node1.children.add(node4);
 
+        expected.add(1);
+        expected.add(3);
         expected.add(5);
         expected.add(6);
-        expected.add(3);
         expected.add(2);
         expected.add(4);
-        expected.add(1);
     }
 
     @Test
-    void postorder() {
-        assertEquals(expected, new Solution().postorder(node1));
+    void preorder() {
+        assertEquals(expected, new Solution().preorder(node1));
     }
 
     @Test
-    void postOrderUseStack() {
-        assertEquals(expected, new Solution().postOrderUseStack(node1));
-    }
-
-    @Test
-    void postOrderUseDeque() {
-        assertEquals(expected, new Solution().postOrderUseDeque(node1));
+    void preorderUseStack() {
+        assertEquals(expected, new Solution().preorderUseStack(node1));
     }
 }
