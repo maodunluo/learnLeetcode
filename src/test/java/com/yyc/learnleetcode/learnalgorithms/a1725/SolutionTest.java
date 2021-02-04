@@ -3,11 +3,10 @@ package com.yyc.learnleetcode.learnalgorithms.a1725;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
-
-import com.sun.tools.javac.util.List;
 
 
 class SolutionTest {

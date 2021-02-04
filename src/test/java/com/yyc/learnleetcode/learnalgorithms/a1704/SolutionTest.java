@@ -1,12 +1,9 @@
 package com.yyc.learnleetcode.learnalgorithms.a1704;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.Collection;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
-
-import com.sun.tools.javac.util.List;
 
 class SolutionTest {
 

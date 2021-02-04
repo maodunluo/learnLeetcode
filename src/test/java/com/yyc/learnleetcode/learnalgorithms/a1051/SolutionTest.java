@@ -1,6 +1,6 @@
-package com.yyc.learnleetcode.learnalgorithms.a1742;
+package com.yyc.learnleetcode.learnalgorithms.a1051;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,23 +12,23 @@ class SolutionTest {
     static Collection<Object[]> dataProvider() {
         return List.of(
                 new Object[]{
-                        new int[]{1, 10},
-                        2
+                        new int[]{1, 1, 4, 2, 1, 3},
+                        3
                 },
                 new Object[]{
-                        new int[]{5, 15},
-                        2
+                        new int[]{5, 1, 2, 3, 4},
+                        5
                 },
                 new Object[]{
-                        new int[]{19, 28},
-                        2
+                        new int[]{1, 2, 3, 4, 5},
+                        0
                 }
         );
     }
 
     @ParameterizedTest
     @MethodSource("dataProvider")
-    void countBalls(int[] inputArray, int exceptedNum) {
-        assertEquals(exceptedNum, new Solution().countBalls(inputArray[0], inputArray[1]));
+    void heightCheckerTest(int[] inputArrays, int expected) {
+        assertEquals(expected, new Solution().heightChecker(inputArrays));
     }
 }
