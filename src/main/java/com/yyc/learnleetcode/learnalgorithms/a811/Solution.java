@@ -30,7 +30,7 @@ public class Solution {
         }
         List<String> resultList = new ArrayList<>();
         for (Map.Entry<String, Integer> entry : domainMap.entrySet()) {
-            resultList.add(entry.getValue() + " " + entry.getKey());
+            resultList.add(entry.getValue() + POINT + entry.getKey());
         }
         return resultList;
     }
