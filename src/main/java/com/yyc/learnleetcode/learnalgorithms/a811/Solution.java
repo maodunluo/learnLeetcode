@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * 811. Subdomain Visit Count
@@ -12,24 +11,21 @@ import java.util.Objects;
  * @author yuechao
  */
 public class Solution {
+
+    private static final String DOT = ".";
+    private static final String POINT = " ";
+
     public List<String> subdomainVisits(String[] cpDomains) {
         Map<String, Integer> domainMap = new HashMap<>(32);
+
         for (String cpDomain : cpDomains) {
-            String[] domainParameters = cpDomain.split(" ");
+            String[] domainParameters = cpDomain.split(POINT);
             Integer count = Integer.parseInt(domainParameters[0]);
             String domain = domainParameters[1];
-            if (Objects.isNull(domainMap.get(domain))) {
-                domainMap.put(domain, count);
-            } else {
-                domainMap.put(domain, count + domainMap.get(domain));
-            }
-            while (domain.contains(".")) {
-                domain = domain.substring(domain.indexOf(".") + 1);
-                if (Objects.isNull(domainMap.get(domain))) {
-                    domainMap.put(domain, count);
-                } else {
-                    domainMap.put(domain, count + domainMap.get(domain));
-                }
+            domainMap.put(domain, count + domainMap.getOrDefault(domain, 0));
+            while (domain.contains(DOT)) {
+                domain = domain.substring(domain.indexOf(DOT) + 1);
+                domainMap.put(domain, count + domainMap.getOrDefault(domain, 0));
             }
         }
         List<String> resultList = new ArrayList<>();
