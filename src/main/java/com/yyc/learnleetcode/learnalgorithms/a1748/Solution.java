@@ -16,7 +16,7 @@ public class Solution {
             hashmap.put(num, orDefault + 1);
         }
         int result = 0;
-        for (Map.Entry<Integer, Integer> entry: hashmap.entrySet() ) {
+        for (Map.Entry<Integer, Integer> entry : hashmap.entrySet()) {
             if (entry.getValue() == 1) {
                 result += entry.getKey();
             }
