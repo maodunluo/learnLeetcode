@@ -28,4 +28,10 @@ class SolutionTest {
   void reverseString(char[] inputArr, char[] expectArr) {
     assertArrayEquals(expectArr, new Solution().reverseString(inputArr));
   }
+
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  void reverseStringI(char[] inputArr, char[] expectArr) {
+    assertArrayEquals(expectArr, new Solution().reverseStringI(inputArr));
+  }
 }
