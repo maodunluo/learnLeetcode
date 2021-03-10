@@ -10,7 +10,7 @@ public class Solution {
   public boolean isStrobogrammatic(String num) {
     for (int i = 0; i < num.length() / 2 + 1; i++) {
       char symmetryChar = num.charAt(num.length() - i - 1);
-      if ((num.charAt(i) == '6' && symmetryChar != '9')) {
+      if (num.charAt(i) == '6' && symmetryChar != '9') {
         return false;
       }
       if (num.charAt(i) == '9' && symmetryChar != '6') {
