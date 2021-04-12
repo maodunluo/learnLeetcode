@@ -6,11 +6,14 @@ package com.yyc.learnleetcode.learnalgorithms.a1332;
  * @author yuechao
  */
 public class Solution {
+  
+  private static final int TWO = 2;
+
   public int removePalindromeSub(String s) {
     if(s == null || "".equals(s)) {
       return 0;
     }
-    for(int i = 0; i< (s.length() -1) / 2; i++) {
+    for(int i = 0; i< (s.length() -1) / TWO; i++) {
       if(s.charAt(i) != (s.charAt(s.length() - 1 -i))) {
         return 2;
       }
