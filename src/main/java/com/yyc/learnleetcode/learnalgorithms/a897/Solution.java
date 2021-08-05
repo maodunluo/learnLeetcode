@@ -10,7 +10,7 @@ public class Solution {
     public TreeNode increasingBST(TreeNode root) {
         List<Integer> values = new ArrayList<>();
         inOrder(values, root);
-        TreeNode node = new TreeNode();
+        var node = new TreeNode();
         buildNewTree(values, node);
         return node;
     }

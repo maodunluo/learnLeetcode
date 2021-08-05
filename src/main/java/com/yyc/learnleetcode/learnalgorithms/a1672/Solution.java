@@ -5,9 +5,9 @@ package com.yyc.learnleetcode.learnalgorithms.a1672;
  */
 public class Solution {
     public int maximumWealth(int[][] accounts) {
-        int result = 0;
+        var result = 0;
         for (int[] account : accounts) {
-            int sum = 0;
+            var sum = 0;
             for (int acc : account) {
                 sum += acc;
             }

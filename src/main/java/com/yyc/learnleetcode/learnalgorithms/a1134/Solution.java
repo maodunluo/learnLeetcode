@@ -12,7 +12,7 @@ public class Solution {
     private boolean getSum(int n, int count) {
         double sum = 0;
         int input = n;
-        for (int i = 0; i <= count; i++) {
+        for (var i = 0; i <= count; i++) {
             sum += Math.pow(input % 10, count);
             input /= 10;
         }
@@ -20,7 +20,7 @@ public class Solution {
     }
 
     private int getCount(int n) {
-        int count = 0;
+        var count = 0;
         while (n != 0) {
             n /= 10;
             count++;

@@ -15,11 +15,11 @@ public class Solution {
 
   public int numSpecialEquivGroups(String[] inputArray) {
     Map<Integer, List<List<Character>>> indexMap = new HashMap<>(inputArray.length);
-    for (int index = 0; index < inputArray.length; index++) {
+    for (var index = 0; index < inputArray.length; index++) {
       List<List<Character>> setList = new ArrayList<>();
       List<Character> evenList = new ArrayList<>();
       List<Character> oddList = new ArrayList<>();
-      for (int i = 0; i < inputArray[index].length(); i++) {
+      for (var i = 0; i < inputArray[index].length(); i++) {
         if (i % 2 != 0) {
           evenList.add(inputArray[index].charAt(i));
         } else {

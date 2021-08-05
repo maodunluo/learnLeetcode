@@ -16,9 +16,9 @@ public class Solution {
     public int[] kWeakestRows(int[][] mat, int k) {
         int rowSize = mat.length;
         Map<Integer, Integer> rowMap = new HashMap<>(rowSize);
-        for (int i = 0; i < rowSize; i++) {
+        for (var i = 0; i < rowSize; i++) {
             int[] row = mat[i];
-            int count = 0;
+            var count = 0;
             for (int number : row) {
                 if (number == 1) {
                     count++;
@@ -29,8 +29,8 @@ public class Solution {
         List<Map.Entry<Integer, Integer>> entryList = new ArrayList<>(rowMap.entrySet());
         List<Integer> keyList = entryList.stream().sorted(Comparator.comparingInt(Map.Entry::getValue))
                 .map(Map.Entry::getKey).collect(Collectors.toList());
-        int[] result = new int[k];
-        for (int i = 0; i < k; i++) {
+        var result = new int[k];
+        for (var i = 0; i < k; i++) {
             result[i] = keyList.get(i);
         }
         return result;

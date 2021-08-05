@@ -7,9 +7,9 @@ package com.yyc.learnleetcode.learnalgorithms.a1021;
  */
 public class Solution {
     public String removeOuterParentheses(String input) {
-        int count = 0;
-        int flag = 0;
-        StringBuilder builder = new StringBuilder(input);
+        var count = 0;
+        var flag = 0;
+        var builder = new StringBuilder(input);
         for (int i = input.length() - 1; i >= 0; i--) {
             if (input.charAt(i) == ')') {
                 count++;
@@ -27,8 +27,8 @@ public class Solution {
     }
     
     public String removeOuterParentheses2(String s) {
-        StringBuilder builder = new StringBuilder();
-        int open = 0;
+        var builder = new StringBuilder();
+        var open = 0;
         for (char c : s.toCharArray()) {
             if (c == '(' && open++ > 0) {
                 builder.append(c);

@@ -31,7 +31,7 @@ public class Solution {
         Deque<Node> stack = new ArrayDeque<>();
         stack.push(root);
         while (!stack.isEmpty()) {
-            Node node = stack.pop();
+            var node = stack.pop();
             result.add(node.val);
             Deque<Node> childStack = new ArrayDeque<>();
             if (node.children != null) {
@@ -40,7 +40,7 @@ public class Solution {
                 }
             }
             int size = childStack.size();
-            for (int i = 0; i < size; i++){
+            for (var i = 0; i < size; i++){
                 stack.push(childStack.pop());
             }
         }

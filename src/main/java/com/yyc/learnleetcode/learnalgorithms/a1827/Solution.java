@@ -11,8 +11,8 @@ public class Solution {
       return 0;
     }
     int current = nums[0];
-    int result = 0;
-    for(int i = 1; i < nums.length; i++) {
+    var result = 0;
+    for(var i = 1; i < nums.length; i++) {
       if(nums[i] <= current) {
         result += (current + 1 - nums[i]);
         current += 1;

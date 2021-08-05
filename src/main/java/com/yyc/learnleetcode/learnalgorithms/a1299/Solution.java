@@ -5,11 +5,11 @@ package com.yyc.learnleetcode.learnalgorithms.a1299;
  */
 public class Solution {
     public int[] replaceElements(int[] arr) {
-        int[] result = new int[arr.length];
-        int maxIndex = 0;
+        var result = new int[arr.length];
+        var maxIndex = 0;
         while (maxIndex != arr.length - 1) {
             int startIndex = maxIndex;
-            int max = 0;
+            var max = 0;
             for (int i = maxIndex + 1; i < arr.length; i++) {
                 if (max < arr[i]) {
                     max = arr[i];

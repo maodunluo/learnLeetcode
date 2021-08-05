@@ -13,7 +13,7 @@ public class Solution {
 
   public ListNode middleNode(ListNode head) {
     List<ListNode> listNodeList = new ArrayList<>();
-    int count = 0;
+    var count = 0;
     while (!ObjectUtils.isEmpty(head)) {
       listNodeList.add(head);
       count++;

@@ -9,9 +9,9 @@ import java.util.Map;
  */
 public class Solution {
     public int repeatedNTimes(int[] arr) {
-        int result = 0;
+        var result = 0;
         int[] sortedArr = Arrays.stream(arr).sorted().toArray();
-        int count = 0;
+        var count = 0;
         int firstElement = sortedArr[0];
         for (int number : sortedArr) {
             if (number == firstElement) {
@@ -40,7 +40,7 @@ public class Solution {
     }
 
     private int getCountEqualsHalfArr(int[] arr, Map<Integer, Integer> map) {
-        int result = 0;
+        var result = 0;
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             if (entry.getValue() == arr.length / 2) {
                  result = entry.getKey();
@@ -51,7 +51,7 @@ public class Solution {
     }
 
     public int repeatedNTimesUseArr(int[] arr) {
-        int[] count = new int[10000];
+        var count = new int[10000];
         for (int a : arr) {
             if (count[a]++ == 1) {
                 return a;

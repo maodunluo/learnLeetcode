@@ -11,7 +11,7 @@ import java.util.LinkedList;
 class Solution {
     public String removeDuplicates(String s) {
         Deque<Character> deque = new LinkedList<>();
-        for (int i = 0; i < s.length(); i++) {
+        for (var i = 0; i < s.length(); i++) {
             if (deque.peekLast() != null) {
                 if (s.charAt(i) == deque.peekLast()) {
                     deque.pollLast();
@@ -22,7 +22,7 @@ class Solution {
                 deque.add(s.charAt(i));
             }
         }
-        StringBuilder result = new StringBuilder();
+        var result = new StringBuilder();
         for (Character character : deque) {
             result.append(character);
         }

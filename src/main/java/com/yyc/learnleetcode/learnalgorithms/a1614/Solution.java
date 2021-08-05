@@ -8,9 +8,9 @@ package com.yyc.learnleetcode.learnalgorithms.a1614;
  */
 public class Solution {
     public int maxDepth(String s) {
-        int res = 0;
-        int cur = 0;
-        for (int i = 0; i < s.length(); ++i) {
+        var res = 0;
+        var cur = 0;
+        for (var i = 0; i < s.length(); ++i) {
             if (s.charAt(i) == '(') {
                 res = Math.max(res, ++cur);
             }

@@ -5,9 +5,9 @@ package com.yyc.learnleetcode.learnalgorithms.a1351;
  */
 public class Solution {
     public int countNegatives(int[][] grid) {
-        int result = 0;
+        var result = 0;
         for (int[] row : grid) {
-            for (int i = 0; i < row.length; i++) {
+            for (var i = 0; i < row.length; i++) {
                 if (row[i] < 0) {
                     result += (row.length - i);
                     break;

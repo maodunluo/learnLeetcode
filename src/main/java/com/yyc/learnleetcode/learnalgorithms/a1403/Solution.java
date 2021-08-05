@@ -12,7 +12,7 @@ import java.util.List;
 public class Solution {
     public List<Integer> minSubsequence(int[] nums) {
         Arrays.sort(nums);
-        int sum = 0;
+        var sum = 0;
         for (int num : nums) {
             sum += num;
         }
@@ -26,7 +26,7 @@ public class Solution {
             result.add(nums[1]);
             return result;
         }
-        int partSum = 0;
+        var partSum = 0;
         for (int i = nums.length - 1 ; i > 0 ; i--) {
             partSum += nums[i];
             sum -= nums[i];

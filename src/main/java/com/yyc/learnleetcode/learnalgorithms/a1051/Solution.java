@@ -13,8 +13,8 @@ public class Solution {
         int[] inputArray = Arrays.copyOf(heights, heights.length);
         //对传入数组按照从小到大排序，然后和原来的数组比较。
         Arrays.sort(heights);
-        int result = 0;
-        for (int i = 0; i < heights.length; i++) {
+        var result = 0;
+        for (var i = 0; i < heights.length; i++) {
             if (inputArray[i] != heights[i]) {
                 result++;
             }

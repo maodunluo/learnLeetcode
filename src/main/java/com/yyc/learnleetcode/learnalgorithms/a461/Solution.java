@@ -6,7 +6,7 @@ package com.yyc.learnleetcode.learnalgorithms.a461;
 public class Solution {
     public int hammingDistance(int x, int y) {
         int z = x ^ y;
-        int result = 0;
+        var result = 0;
         while (z != 0) {
             if (z % 2 != 0) {
                 result++;

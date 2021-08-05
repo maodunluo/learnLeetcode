@@ -1,12 +1,15 @@
 package com.yyc.learnleetcode.learnalgorithms.a657;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author yuechao
  */
+@Slf4j
 public class Solution {
     public boolean judgeCircle(String moves) {
-        int level = 0;
-        int vertical = 0;
+        var level = 0;
+        var vertical = 0;
         for (char c:moves.toCharArray()) {
             switch (c) {
                 case 'L':
@@ -22,7 +25,7 @@ public class Solution {
                     vertical--;
                     break;
                 default:
-                    System.out.println("错误的方向");
+                    log.error("错误的方向");
             }
         }
         boolean result;

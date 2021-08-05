@@ -26,7 +26,7 @@ public class Logger {
      * The timestamp is in seconds granularity.
      */
     public boolean shouldPrintMessage(int timestamp, String message) {
-        Integer integer = map.get(message);
+        var integer = map.get(message);
         if (Objects.isNull(integer) || timestamp - integer >= INTERVAL) {
             map.put(message, timestamp);
             return true;

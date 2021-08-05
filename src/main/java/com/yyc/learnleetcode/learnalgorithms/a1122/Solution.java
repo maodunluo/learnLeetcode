@@ -18,10 +18,10 @@ public class Solution {
     for (int value : arr1) {
       elementCountMap.put(value, elementCountMap.getOrDefault(value, 0) + 1);
     }
-    int[] result = new int[arr1.length];
-    int count = 0;
+    var result = new int[arr1.length];
+    var count = 0;
     for (int value : arr2) {
-      for (int j = 0; j < elementCountMap.get(value); j++) {
+      for (var j = 0; j < elementCountMap.get(value); j++) {
         result[count++] = value;
       }
       elementCountMap.remove(value);
@@ -29,7 +29,7 @@ public class Solution {
     List<Integer> keyList = elementCountMap.keySet().stream()
         .sorted(Comparator.comparingInt(o -> o)).collect(Collectors.toList());
     for (Integer key: keyList) {
-      for (int i = 0; i < elementCountMap.get(key); i++) {
+      for (var i = 0; i < elementCountMap.get(key); i++) {
         result[count++] = key;
       }
     }

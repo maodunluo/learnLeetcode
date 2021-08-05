@@ -8,7 +8,7 @@ package com.yyc.learnleetcode.learnalgorithms.a709;
 public class Solution {
     public String toLowerCase(String str) {
         char[] chars = str.toCharArray();
-        for (int i  = 0; i < chars.length; i++) {
+        for (var i  = 0; i < chars.length; i++) {
             if ((int) chars[i] < 97 && (int) chars[i] > 64) {
                 chars[i] = (char) ((int)chars[i] + 32);
             }

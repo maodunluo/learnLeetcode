@@ -17,7 +17,7 @@ public class Solution {
   public int[] sortByBits(int[] arr) {
     Map<Integer, List<Integer>> resultMap = new HashMap<>(arr.length);
     for (int i : arr) {
-      int bit1Count = 0;
+      var bit1Count = 0;
       int number = i;
       while (number != 0) {
         if (number % 2 != 0) {
@@ -29,14 +29,14 @@ public class Solution {
       tempList.add(i);
       resultMap.put(bit1Count, tempList);
     }
-    int[] result = new int[arr.length];
+    var result = new int[arr.length];
     List<Integer> keyList = resultMap.keySet().stream().sorted().collect(Collectors.toList());
     List<Integer> valueList = new ArrayList<>();
     for (Integer key : keyList) {
       resultMap.get(key).sort(Comparator.comparingInt(value -> value));
       valueList.addAll(resultMap.get(key));
     }
-    for (int i = 0; i < valueList.size(); i++) {
+    for (var i = 0; i < valueList.size(); i++) {
       result[i] = valueList.get(i);
     }
     return result;

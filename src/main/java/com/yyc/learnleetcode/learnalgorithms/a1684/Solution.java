@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class Solution {
     public int countConsistentStrings(String allowed, String[] words) {
-        int result = 0;
+        var result = 0;
         for (String word: words) {
             char[] chars = word.toCharArray();
             Set<Character> charSet = new HashSet<>();
@@ -18,7 +18,7 @@ public class Solution {
                 charSet.add(aChar);
             }
             int size = charSet.size();
-            int count = 0;
+            var count = 0;
             for (char c : charSet) {
                 if (!allowed.contains(String.valueOf(c))) {
                     break;

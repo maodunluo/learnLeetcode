@@ -7,10 +7,10 @@ package com.yyc.learnleetcode.learnalgorithms.a771;
  */
 public class Solution {
     public int numJewelsInStones(String jewels, String stones) {
-        int result = 0;
-        for (int i = 0; i < jewels.length(); i++) {
-            String c = String.valueOf(jewels.charAt(i));
-            for (int j = 0; j < stones.length(); j++) {
+        var result = 0;
+        for (var i = 0; i < jewels.length(); i++) {
+            var c = String.valueOf(jewels.charAt(i));
+            for (var j = 0; j < stones.length(); j++) {
                 if (c.equals(stones.substring(j, j + 1))) {
                     result++;
                 }
@@ -26,8 +26,8 @@ public class Solution {
      * @return the count of jewels
      */
     public int numJewelsInStonesWithAscii(String jewels, String stones) {
-        int result = 0;
-        int[] cnt = new int[128];
+        var result = 0;
+        var cnt = new int[128];
         for (char c : stones.toCharArray()) {
             cnt[c]++;
         }

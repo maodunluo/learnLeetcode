@@ -11,10 +11,10 @@ import java.util.Deque;
  */
 public class Solution {
     public int[] sortArrayByParity(int[] arr) {
-        int[] result = new int[arr.length];
-        int[] oddArray = new int[arr.length];
-        int oddArrayIndex = 0;
-        int resultIndex = 0;
+        var result = new int[arr.length];
+        var oddArray = new int[arr.length];
+        var oddArrayIndex = 0;
+        var resultIndex = 0;
         for (int number : arr) {
             if (number % 2 != 0) {
                 oddArray[oddArrayIndex++] = number;
@@ -64,8 +64,8 @@ public class Solution {
                 deque.addFirst(value);
             }
         }
-        int[] result = new int[deque.size()];
-        int index = 0;
+        var result = new int[deque.size()];
+        var index = 0;
         for (Integer element : deque) {
             result[index++] = element;
         }

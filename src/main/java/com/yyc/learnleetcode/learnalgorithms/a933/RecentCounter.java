@@ -21,7 +21,7 @@ public class RecentCounter {
     public int pingV1(int t) {
         inputList.add(t);
         int left = t - 3000;
-        int leftIndex = 0;
+        var leftIndex = 0;
         for (int input : inputList) {
             if (left <= input) {
                 leftIndex = inputList.indexOf(input);

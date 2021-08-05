@@ -6,7 +6,7 @@ package com.yyc.learnleetcode.learnalgorithms.a1085;
 public class Solution {
     private static final int MOD = 2;
     public int sumOfDigits(int[] input) {
-        int result = 0;
+        var result = 0;
         int minimal = input[0];
         for (int element : input) {
             if (minimal > element) {
@@ -21,7 +21,7 @@ public class Solution {
     }
 
     private int getSum(int minimal) {
-        int sum = 0;
+        var sum = 0;
         while (minimal != 0) {
             sum += minimal % 10;
             minimal /= 10;

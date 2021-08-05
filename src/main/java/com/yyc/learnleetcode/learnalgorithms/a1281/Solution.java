@@ -8,8 +8,8 @@ package com.yyc.learnleetcode.learnalgorithms.a1281;
 public class Solution {
     public int subtractProductAndSum(int n) {
         //把各个位的数字取出来，然后进行相乘和相加。
-        int product = 1;
-        int sum = 0;
+        var product = 1;
+        var sum = 0;
         while(n > 0) {
             int i = n % 10;
             sum += i;

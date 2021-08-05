@@ -10,9 +10,9 @@ import java.util.Map;
 public class Solution {
     public int[][] highFive(int[][] items) {
         sortItems(items);
-        int i = 0;
+        var i = 0;
         int cur = items[0][0] + 1;
-        int sum = 0;
+        var sum = 0;
         LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
         for (int[] arr : items) {
             if (cur == arr[0]) {
@@ -41,9 +41,9 @@ public class Solution {
     }
 
     private int[][] convertMapToArr(LinkedHashMap<Integer, Integer> map) {
-        int i = 0;
+        var i = 0;
         int size = map.size();
-        int[][] ans = new int[size][2];
+        var ans = new int[size][2];
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             ans[i][0] = entry.getKey();
             ans[i][1] = entry.getValue();

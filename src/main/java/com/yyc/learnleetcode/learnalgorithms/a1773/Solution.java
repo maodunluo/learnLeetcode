@@ -24,7 +24,7 @@ public class Solution {
       default:
         index = 3;
     }
-    int result = 0;
+    var result = 0;
     for (List<String> item : items) {
       if (ruleValue.equals(item.get(index))) {
         result++;

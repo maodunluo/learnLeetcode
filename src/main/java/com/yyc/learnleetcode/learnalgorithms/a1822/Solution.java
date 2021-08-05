@@ -8,8 +8,8 @@ package com.yyc.learnleetcode.learnalgorithms.a1822;
 public class Solution {
 
   public int arraySign(int[] nums) {
-    int result = 0;
-    final int TWO = 2;
+    var result = 0;
+    final var TWO = 2;
     for (int num : nums) {
       if (num == 0) {
         return 0;

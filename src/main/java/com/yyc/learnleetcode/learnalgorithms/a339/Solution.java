@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class Solution {
     public int depthSum(List<NestedInteger> nestedList) {
-        int depth = 1;
+        var depth = 1;
         return depthSum(nestedList, depth);
     }
 
@@ -21,7 +21,7 @@ public class Solution {
      * @return 深度的和
      */
     private int depthSum(List<NestedInteger> nestedList, int depth) {
-        int result = 0;
+        var result = 0;
         for (NestedInteger nestedInteger : nestedList) {
             if (nestedInteger.isInteger()) {
                 result += (nestedInteger.getInteger() * depth);

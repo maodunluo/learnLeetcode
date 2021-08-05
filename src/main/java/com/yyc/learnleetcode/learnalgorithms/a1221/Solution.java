@@ -8,9 +8,9 @@ package com.yyc.learnleetcode.learnalgorithms.a1221;
 public class Solution {
 
     public int balancedStringSplit(String s) {
-        int cnt = 0;
-        int res = 0;
-        for (int i = 0; i < s.length(); i++) {
+        var cnt = 0;
+        var res = 0;
+        for (var i = 0; i < s.length(); i++) {
             cnt += s.charAt(i) == 'L' ? 1 : -1;
             if (cnt == 0) {
                 res++;

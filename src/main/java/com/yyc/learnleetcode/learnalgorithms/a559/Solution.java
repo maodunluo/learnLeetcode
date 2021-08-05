@@ -14,7 +14,7 @@ public class Solution {
     if (root == null) {
       return 0;
     }
-    int depth = 1;
+    var depth = 1;
     return maxDepth(root.getChildren(), depth);
   }
 

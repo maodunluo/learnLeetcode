@@ -10,7 +10,7 @@ public class Solution {
   private static final int CHARACTER_COUNT = 26;
 
   public boolean checkIfPangram(String sentence) {
-    boolean[] countArray = new boolean[CHARACTER_COUNT];
+    var countArray = new boolean[CHARACTER_COUNT];
     if (sentence.length() < CHARACTER_COUNT) {
       return false;
     }

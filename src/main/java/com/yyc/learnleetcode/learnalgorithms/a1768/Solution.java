@@ -8,8 +8,8 @@ package com.yyc.learnleetcode.learnalgorithms.a1768;
 public class Solution {
     public String mergeAlternately(String word1, String word2) {
         int minLength = Math.min(word1.length(), word2.length());
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < minLength; i++) {
+        var result = new StringBuilder();
+        for (var i = 0; i < minLength; i++) {
             result.append(word1.charAt(i));
             result.append(word2.charAt(i));
         }

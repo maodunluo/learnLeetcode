@@ -13,7 +13,7 @@ public class Solution {
     }
 
     String convertArrayToString(String[] arr) {
-        StringBuilder result = new StringBuilder();
+        var result = new StringBuilder();
         for (String s : arr) {
             result.append(s);
         }

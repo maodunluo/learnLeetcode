@@ -7,7 +7,7 @@ package com.yyc.learnleetcode.learnalgorithms.a1217;
  */
 public class Solution {
     public int minCostToMoveChips(int[] position) {
-        int[] positionArray = new int[2];
+        var positionArray = new int[2];
         for (int number : position) {
             if (number % 2 == 1) {
                 positionArray[1] += 1;
