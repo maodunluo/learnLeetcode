@@ -33,7 +33,7 @@ public class Solution {
             return arr;
         }
         int current;
-        for (int i = 0; i < arr.length - 1; i++) {
+        for (var i = 0; i < arr.length - 1; i++) {
             int preIndex = i;
             current = arr[i + 1];
             while (preIndex >= 0 && current < arr[preIndex]) {
@@ -50,9 +50,9 @@ public class Solution {
             return arr;
         }
         int temp;
-        boolean flag = false;
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - 1 - i; j++) {
+        var flag = false;
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = 0; j < arr.length - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
@@ -71,7 +71,7 @@ public class Solution {
         if (arr.length == 0) {
             return arr;
         }
-        for (int i = 0; i < arr.length; i++) {
+        for (var i = 0; i < arr.length; i++) {
             int minIndex = i;
             for (int j = i; j < arr.length; j++) {
                 if (arr[minIndex] > arr[j]) {
@@ -96,10 +96,10 @@ public class Solution {
     }
 
     private int[] mergeSort(int[] left, int[] right) {
-        int[] result = new int[left.length + right.length];
-        int i = 0;
-        int j = 0;
-        for (int index = 0; index < result.length; index++) {
+        var result = new int[left.length + right.length];
+        var i = 0;
+        var j = 0;
+        for (var index = 0; index < result.length; index++) {
             if (i >= left.length) {
                 result[index] = right[j++];
             } else if (j >= right.length) {

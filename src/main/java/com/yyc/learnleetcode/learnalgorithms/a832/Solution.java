@@ -8,12 +8,12 @@ import java.util.Deque;
  */
 public class Solution {
     public int[][] flipAndInvertImage(int[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
+        for (var i = 0; i < arr.length; i++) {
             Deque<Integer> stack = new ArrayDeque<>();
-            for (int j = 0; j < arr[i].length; j++) {
+            for (var j = 0; j < arr[i].length; j++) {
                 stack.push(arr[i][j]);
             }
-            for (int j = 0; j < arr[i].length; j++) {
+            for (var j = 0; j < arr[i].length; j++) {
                 arr[i][j] =stack.pop();
                 arr[i][j] ^= 1;
             }

@@ -23,7 +23,7 @@ public class Solution {
 
     public String destcity2(List<List<String>> paths) {
         Set<String> hashSet = new HashSet<>();
-        String result = "";
+        var result = "";
 
         for (List<String> path : paths) {
             hashSet.add(path.get(0));

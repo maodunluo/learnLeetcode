@@ -8,11 +8,11 @@ package com.yyc.learnleetcode.learnalgorithms.a883;
 public class Solution {
 
   public int projectionArea(int[][] grid) {
-    int result = 0;
-    for (int i = 0; i < grid.length; i++) {
-      int rowMax = 0;
-      int columnMax = 0;
-      for (int j = 0; j < grid[i].length; j++) {
+    var result = 0;
+    for (var i = 0; i < grid.length; i++) {
+      var rowMax = 0;
+      var columnMax = 0;
+      for (var j = 0; j < grid[i].length; j++) {
         if (grid[i][j] > rowMax) {
           rowMax = grid[i][j];
         }

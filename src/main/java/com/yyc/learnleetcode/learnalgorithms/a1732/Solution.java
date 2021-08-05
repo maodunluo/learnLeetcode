@@ -7,8 +7,8 @@ package com.yyc.learnleetcode.learnalgorithms.a1732;
  */
 public class Solution {
     public int largestAltitude(int[] gain) {
-        int result = 0;
-        int sum = 0;
+        var result = 0;
+        var sum = 0;
         for (int value : gain) {
             sum += value;
             if (sum > result) {

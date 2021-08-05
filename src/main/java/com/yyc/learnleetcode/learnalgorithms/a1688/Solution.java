@@ -7,7 +7,7 @@ package com.yyc.learnleetcode.learnalgorithms.a1688;
  */
 public class Solution {
     public int numberOfMatches(int n) {
-        int result = 0;
+        var result = 0;
         while(n > 1) {
             result += n /2;
             if(n % 2 == 1) {

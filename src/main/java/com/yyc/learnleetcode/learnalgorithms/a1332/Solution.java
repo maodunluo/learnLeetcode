@@ -13,7 +13,7 @@ public class Solution {
     if(s == null || "".equals(s)) {
       return 0;
     }
-    for(int i = 0; i< (s.length() -1) / TWO; i++) {
+    for(var i = 0; i< (s.length() -1) / TWO; i++) {
       if(s.charAt(i) != (s.charAt(s.length() - 1 -i))) {
         return 2;
       }

@@ -8,7 +8,7 @@ package com.yyc.learnleetcode.learnalgorithms.a104;
 public class Solution {
 
   public int maxDepth(TreeNode root) {
-    int depth = 0;
+    var depth = 0;
     return getDepth(root, depth);
   }
 

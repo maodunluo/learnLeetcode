@@ -9,8 +9,8 @@ public class Solution {
 
   public String truncateSentence(String s, int k) {
     String[] s1 = s.split(" ");
-    StringBuilder result = new StringBuilder();
-    for (int i = 0; i < k; i++) {
+    var result = new StringBuilder();
+    for (var i = 0; i < k; i++) {
       result.append(s1[i]);
       result.append(" ");
     }

@@ -5,9 +5,9 @@ package com.yyc.learnleetcode.learnalgorithms.a1304;
  */
 public class Solution {
     public int[] sumZero(int n) {
-        int[] result = new int[n];
-        int sum = 0;
-        for (int i = 0; i < n - 1; i++) {
+        var result = new int[n];
+        var sum = 0;
+        for (var i = 0; i < n - 1; i++) {
             result[i] = i + 1;
             sum+=result[i];
         }

@@ -27,9 +27,9 @@ public class Solution {
 
     public List<Integer> simpleArraysIntersection(int[] arr1, int[] arr2, int[] arr3) {
         List<Integer> result = new LinkedList<>();
-        int i = 0;
-        int j = 0;
-        int k = 0;
+        var i = 0;
+        var j = 0;
+        var k = 0;
         while (i < arr1.length && j < arr2.length && k < arr3.length) {
             if (arr1[i] == arr2[j] && arr2[j] == arr3[k]) {
                 result.add(arr1[i]);

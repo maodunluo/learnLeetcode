@@ -7,9 +7,9 @@ package com.yyc.learnleetcode.learnalgorithms.a821;
  */
 public class Solution {
   public int[] shortestToChar(String s, char c) {
-    int[] result = new int[s.length()];
+    var result = new int[s.length()];
     int prev = Integer.MIN_VALUE / 2;
-    for (int i = 0; i < s.length(); i++) {
+    for (var i = 0; i < s.length(); i++) {
       if (s.charAt(i) == c) {
         prev = i;
       }

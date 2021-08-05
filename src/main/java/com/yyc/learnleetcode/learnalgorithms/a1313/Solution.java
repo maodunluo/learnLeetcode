@@ -11,14 +11,14 @@ import java.util.Arrays;
 public class Solution {
     private static final int GAP = 2;
     public int[] decompressRleList(int[] nums) {
-        int arraySize = 0;
-        for (int i = 0; i < nums.length; i += GAP) {
+        var arraySize = 0;
+        for (var i = 0; i < nums.length; i += GAP) {
             arraySize += nums[i];
         }
-        int[] result = new int[arraySize];
-        int pos = 0;
-        for (int i = 0; i < nums.length; i += GAP) {
-            int[] ints = new int[nums[i]];
+        var result = new int[arraySize];
+        var pos = 0;
+        for (var i = 0; i < nums.length; i += GAP) {
+            var ints = new int[nums[i]];
             for (int j: ints){
                 j = nums[i+1];
                 result[pos] = j;
@@ -31,15 +31,15 @@ public class Solution {
     }
 
     public int[] decompressRleList2(int[] nums) {
-        int arraySize = 0;
-        for (int i = 0; i < nums.length; i += GAP) {
+        var arraySize = 0;
+        for (var i = 0; i < nums.length; i += GAP) {
             arraySize += nums[i];
         }
         //leetcode不支持引用nio中的IntBuffer,但是可以用Arrays
-        IntBuffer intBuffer = IntBuffer.allocate(arraySize);
+        var intBuffer = IntBuffer.allocate(arraySize);
 
-        for (int i = 0; i < nums.length; i += GAP) {
-            int[] ints = new int[nums[i]];
+        for (var i = 0; i < nums.length; i += GAP) {
+            var ints = new int[nums[i]];
             Arrays.fill(ints, nums[i+1]);
             intBuffer.put(ints);
         }

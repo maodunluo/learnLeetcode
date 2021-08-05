@@ -8,10 +8,10 @@ package com.yyc.learnleetcode.learnalgorithms.a1309;
  */
 public class Solution {
     public String freqAlphabets(String s) {
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < s.length(); i++) {
+        var builder = new StringBuilder();
+        for (var i = 0; i < s.length(); i++) {
             if (i < s.length() - 2 && s.charAt(i + 2) == '#') {
-                String substring = s.substring(i, i + 2);
+                var substring = s.substring(i, i + 2);
                 char c = (char) ((Integer.parseInt(substring) - 1) + 'a');
                 builder.append(c);
                 i += 2;
@@ -24,8 +24,8 @@ public class Solution {
 
     public String freqAlphabets2(String s) {
         char[] chars = s.toCharArray();
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < chars.length; i++) {
+        var builder = new StringBuilder();
+        for (var i = 0; i < chars.length; i++) {
             if (i < chars.length - 2 && chars[i + 2] == '#') {
                 char c = (char) (((chars[i] - '1') * 10 + chars[i + 1] - '0') + 'j');
                 builder.append(c);

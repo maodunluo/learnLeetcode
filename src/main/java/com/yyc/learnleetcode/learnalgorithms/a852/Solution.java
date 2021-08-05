@@ -8,8 +8,8 @@ package com.yyc.learnleetcode.learnalgorithms.a852;
 public class Solution {
     public int peakIndexInMountainArray(int[] arr) {
         int max = arr[0];
-        int result = 0;
-        for (int i = 1; i < arr.length; i++) {
+        var result = 0;
+        for (var i = 1; i < arr.length; i++) {
             if (arr[i] > max) {
                 max = arr[i];
                 result++;

@@ -8,9 +8,9 @@ package com.yyc.learnleetcode.learnalgorithms.a922;
 public class Solution {
     public int[] sortArrayByParityII(int[] inputArray)
     {
-        int oddIndex = 0;
-        int evenIndex = 1;
-        int[] resultArray = new int[inputArray.length];
+        var oddIndex = 0;
+        var evenIndex = 1;
+        var resultArray = new int[inputArray.length];
         for (int element : inputArray)
         {
             if (element % 2 != 0){

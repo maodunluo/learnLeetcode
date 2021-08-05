@@ -17,8 +17,8 @@ public class Solution {
     List<Map<Character, Integer>> mapList = new ArrayList<>();
     for (String inputString : inputStringArray) {
       Map<Character, Integer> charCountMap = new HashMap<>(inputString.length());
-      for (int i = 0; i < inputString.length(); i++) {
-        char c = inputString.charAt(i);
+      for (var i = 0; i < inputString.length(); i++) {
+        var c = inputString.charAt(i);
         Integer defaultValue = charCountMap.getOrDefault(c, 0);
         charCountMap.put(c, defaultValue + 1);
       }
@@ -28,12 +28,12 @@ public class Solution {
     for (Character character : mapList.get(0).keySet()) {
       List<Integer> valueList = new ArrayList<>();
       for (Map<Character, Integer> characterIntegerMap : mapList) {
-        Integer integer = characterIntegerMap.getOrDefault(character, 0);
+        var integer = characterIntegerMap.getOrDefault(character, 0);
         valueList.add(integer);
       }
       valueList.sort(Comparator.comparingInt(o -> o));
-      Integer integer = valueList.get(0);
-      for (int i = 0; i < integer; i++) {
+      var integer = valueList.get(0);
+      for (var i = 0; i < integer; i++) {
         result.add(character.toString());
       }
     }

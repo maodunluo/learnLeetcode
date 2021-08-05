@@ -8,7 +8,7 @@ public class Solution {
         for (int[] anArrayPiece : pieces) {
             //防止有元素不匹配的情况
             if (anArrayPiece.length == 1) {
-                int count = 0;
+                var count = 0;
                 for (int number : arr) {
                     if (number == anArrayPiece[0]) {
                         count++;
@@ -21,14 +21,14 @@ public class Solution {
             }
             //只要子数组的顺序和arr中的元素顺序相同就行。
             int piece = anArrayPiece[0];
-            int samePieceInArrIndex = 0;
-            for (int i = 0; i < arr.length; i++) {
+            var samePieceInArrIndex = 0;
+            for (var i = 0; i < arr.length; i++) {
                 if (piece == arr[i]) {
                     samePieceInArrIndex = i;
                     break;
                 }
             }
-            for (int i = 0; i < anArrayPiece.length; i++) {
+            for (var i = 0; i < anArrayPiece.length; i++) {
                 if (arr.length <= samePieceInArrIndex + i) {
                     return false;
                 }

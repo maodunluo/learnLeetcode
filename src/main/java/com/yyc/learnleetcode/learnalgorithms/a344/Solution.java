@@ -11,7 +11,7 @@ public class Solution {
   public char[] reverseString(char[] s) {
     int length = s.length;
     char temp;
-    for (int i = 0; i < length / TWO; i++) {
+    for (var i = 0; i < length / TWO; i++) {
       temp = s[i];
       s[i] = s[length - 1 -i];
       s[length - 1 -i] = temp;
@@ -21,7 +21,7 @@ public class Solution {
 
   public char[] reverseStringI(char[] s) {
     int length = s.length;
-    for (int i = 0; i < length / TWO; i++) {
+    for (var i = 0; i < length / TWO; i++) {
       s[i] = (char) (s[i] ^ s[length - 1 - i]);
       s[length - 1 - i] = (char) (s[length - 1 - i] ^ s[i]);
       s[i] = (char) (s[i] ^ s[length - 1 - i]);

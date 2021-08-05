@@ -34,7 +34,7 @@ public class TreeNode {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        TreeNode treeNode = (TreeNode) o;
+        var treeNode = (TreeNode) o;
         return val == treeNode.val &&
                 Objects.equals(left, treeNode.left) &&
                 Objects.equals(right, treeNode.right);

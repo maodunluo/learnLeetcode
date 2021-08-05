@@ -15,7 +15,7 @@ public class Solution {
             Integer orDefault = hashmap.getOrDefault(num, 0);
             hashmap.put(num, orDefault + 1);
         }
-        int result = 0;
+        var result = 0;
         for (Map.Entry<Integer, Integer> entry : hashmap.entrySet()) {
             if (entry.getValue() == 1) {
                 result += entry.getKey();

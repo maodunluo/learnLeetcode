@@ -8,13 +8,13 @@ public class Solution {
 
     public String sortString(String s) {
         //统计每个字符出现的次数
-        int[] count = new int[26];
+        var count = new int[26];
         for (char c : s.toCharArray()) {
             count[c - 'a']++;
         }
-        StringBuilder result = new StringBuilder();
+        var result = new StringBuilder();
         while (result.length() < s.length()) {
-            for (int i = 0; i < NUMBER_OF_CHAR; i++) {
+            for (var i = 0; i < NUMBER_OF_CHAR; i++) {
                 if (count[i]-- > 0) {
                     result.append((char) (i + 'a'));
                 }

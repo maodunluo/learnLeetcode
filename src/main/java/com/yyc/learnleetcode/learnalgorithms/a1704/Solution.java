@@ -6,9 +6,9 @@ package com.yyc.learnleetcode.learnalgorithms.a1704;
 public class Solution {
     public boolean halvesAreAlike(String s) {
         char[] chars = s.toCharArray();
-        int beforeHalfCount = 0;
-        int afterHalfCount = 0;
-        for (int i = 0; i < chars.length; i++) {
+        var beforeHalfCount = 0;
+        var afterHalfCount = 0;
+        for (var i = 0; i < chars.length; i++) {
             switch (chars[i]) {
                 case 'a':
                 case 'e':

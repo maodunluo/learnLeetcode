@@ -10,11 +10,13 @@ import java.util.HashSet;
  */
 public class Solution {
     public int uniqueMorseRepresentations(String[] words) {
-        String[] morse = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+        var morse = new String[]{".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
+            ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-",
+            "-.--", "--.."};
         HashSet<String> set = new HashSet<>();
         for (String word : words) {
-            StringBuilder builder = new StringBuilder();
-            for (int i = 0; i < word.length(); i++) {
+            var builder = new StringBuilder();
+            for (var i = 0; i < word.length(); i++) {
                 builder.append(morse[word.charAt(i) - 'a']);
             }
             set.add(builder.toString());

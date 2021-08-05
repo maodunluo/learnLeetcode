@@ -19,7 +19,7 @@ public class Solution {
         if (root == null) {
             return 0;
         }
-        int result = 0;
+        var result = 0;
         if (left <= root.val && root.val <= right) {
             result += root.val;
         }

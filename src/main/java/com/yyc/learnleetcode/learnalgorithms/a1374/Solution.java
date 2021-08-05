@@ -7,13 +7,10 @@ public class Solution {
     private static final int MOD = 2;
 
     public String generateTheString(int n) {
-        StringBuilder builder = new StringBuilder();
-        int count = n;
-        for (int i = 0; i < count; i++) {
-            builder.append("a");
-        }
-        if (count % MOD == 0) {
-            builder.setCharAt(count - 1, 'b');
+        var builder = new StringBuilder();
+        builder.append("a".repeat(Math.max(0, n)));
+        if (n % MOD == 0) {
+            builder.setCharAt(n - 1, 'b');
         }
         return builder.toString();
     }

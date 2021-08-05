@@ -8,7 +8,7 @@ package com.yyc.learnleetcode.learnalgorithms.a617;
 public class Solution {
 
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
-        TreeNode treeNode = new TreeNode(0, new TreeNode(0), new TreeNode(0));
+        var treeNode = new TreeNode(0, new TreeNode(0), new TreeNode(0));
         if (t1 == null && t2 == null) {
             treeNode = null;
         } else if (t1 == null) {
@@ -28,7 +28,7 @@ public class Solution {
     }
 
     public TreeNode simpleMergeTrees(TreeNode t1, TreeNode t2) {
-        TreeNode treeNode = new TreeNode(0);
+        var treeNode = new TreeNode(0);
         if (t1 == null) {
             return t2;
         } else if (t2 == null) {

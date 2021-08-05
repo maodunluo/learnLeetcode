@@ -9,9 +9,9 @@ class Solution {
     private static final int DIVISOR = 10;
 
     public int findNumbers(int[] nums) {
-        int result = 0;
+        var result = 0;
         for (int num : nums) {
-            int count = 1;
+            var count = 1;
             while (num / DIVISOR != 0) {
                 count++;
                 num /= 10;

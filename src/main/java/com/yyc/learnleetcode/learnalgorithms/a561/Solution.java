@@ -11,8 +11,8 @@ public class Solution {
     public int arrayPairSum(int[] nums) {
         int[] copyArr = Arrays.copyOf(nums, nums.length);
         Arrays.sort(copyArr);
-        int result = 0;
-        for (int i = 0; i < copyArr.length; i += TWO) {
+        var result = 0;
+        for (var i = 0; i < copyArr.length; i += TWO) {
             result += copyArr[i];
         }
         return result;

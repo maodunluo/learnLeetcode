@@ -9,11 +9,11 @@ public class Solution {
     private static final int MOD = 2;
 
     public int diagonalSum(int[][] mat) {
-        int result = 0;
+        var result = 0;
         if (mat.length % MOD != 0) {
             result -= mat[(mat.length - 1) / 2][(mat.length - 1) / 2];
         }
-        for (int i = 0; i < mat.length; i++) {
+        for (var i = 0; i < mat.length; i++) {
             result += mat[i][mat.length - i - 1] + mat[i][i];
         }
         return result;

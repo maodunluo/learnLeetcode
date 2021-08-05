@@ -12,7 +12,7 @@ public class Solution {
         //在这里用了stream效率变得特别低
         Arrays.sort(arr);
         int gap = arr[1] - arr[0];
-        for (int i = 1; i < arr.length; i++) {
+        for (var i = 1; i < arr.length; i++) {
             if (arr[i] - arr[i - 1] != gap) {
                 return false;
             }

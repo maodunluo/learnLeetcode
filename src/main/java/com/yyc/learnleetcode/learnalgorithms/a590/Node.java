@@ -30,7 +30,7 @@ public class Node {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Node node = (Node) o;
+        var node = (Node) o;
         return val == node.val &&
                 Objects.equals(children, node.children);
     }

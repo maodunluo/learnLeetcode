@@ -41,10 +41,10 @@ public class Solution {
      * @return 计算结果
      */
     public int oddCells2(int n, int m, int[][] indices) {
-        boolean[] oddRows = new boolean[n];
-        boolean[] oddCols = new boolean[m];
-        int cntCol = 0;
-        int cntRow = 0;
+        var oddRows = new boolean[n];
+        var oddCols = new boolean[m];
+        var cntCol = 0;
+        var cntRow = 0;
         for (int[] idx : indices) {
             // if row idx[0] appears odd times, it will correspond to true.
             oddRows[idx[0]] ^= true;

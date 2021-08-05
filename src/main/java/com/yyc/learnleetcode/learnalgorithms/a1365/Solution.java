@@ -13,19 +13,19 @@ import java.util.Map;
 public class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
         //count数组是干什么的？-- 统计每种数字的个数。他的容量为什么是101 --因为0 <= nums[i] <= 100
-        int[] count = new int[101];
+        var count = new int[101];
         //创建一个结果数组
-        int[] results = new int[nums.length];
+        var results = new int[nums.length];
         // 循环当前数组，每个数字个数加一
         for (int num : nums) {
             count[num]++;
         }
         //统计比当前数字小的所有数字和，只有在nums数组中的数字才会有值，其他的都是0，如果i不存在于nums数组中，count[i]和count[i-1]相同
-        for (int i = 1; i <= count.length - 1; i++) {
+        for (var i = 1; i <= count.length - 1; i++) {
             count[i] += count[i - 1];
         }
 
-        for (int i = 0; i < nums.length; i++) {
+        for (var i = 0; i < nums.length; i++) {
             if (nums[i] == 0) {
                 results[i] = 0;
             } else {
@@ -39,10 +39,10 @@ public class Solution {
         Map<Integer, Integer> map = new HashMap<>(32);
         int[] copy = nums.clone();
         Arrays.sort(copy);
-        for (int i = 0; i < nums.length; i++) {
+        for (var i = 0; i < nums.length; i++) {
             map.putIfAbsent(copy[i], i);
         }
-        for (int i = 0; i < nums.length; i++) {
+        for (var i = 0; i < nums.length; i++) {
             copy[i] = map.get(nums[i]);
         }
         return copy;

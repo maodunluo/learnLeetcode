@@ -34,7 +34,7 @@ public class ListNode implements Serializable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        ListNode listNode = (ListNode) o;
+        var listNode = (ListNode) o;
         return val == listNode.val &&
                 Objects.equals(next, listNode.next);
     }

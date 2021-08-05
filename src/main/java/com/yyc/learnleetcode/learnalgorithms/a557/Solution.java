@@ -9,7 +9,7 @@ package com.yyc.learnleetcode.learnalgorithms.a557;
 public class Solution {
     public String reverseWords(String s) {
         String[] words = s.split(" ");
-        StringBuilder builder = new StringBuilder();
+        var builder = new StringBuilder();
         for (String word : words) {
             builder.append(new StringBuilder(word).reverse().append(" "));
         }
