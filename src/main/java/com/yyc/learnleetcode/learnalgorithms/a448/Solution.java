@@ -12,7 +12,7 @@ public class Solution {
 
   public List<Integer> findDisappearedNumbers(int[] nums) {
     List<Integer> result = new ArrayList<>();
-    int[] array = new int[nums.length];
+    var array = new int[nums.length];
     for (int num : nums) {
       array[num - 1] = num;
     }
