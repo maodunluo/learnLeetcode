@@ -1,11 +1,12 @@
 package com.yyc.learnleetcode.learnalgorithms.a22;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * 22. Generate Parentheses
@@ -14,21 +15,39 @@ import java.util.TreeSet;
  */
 public class Solution {
 
+  Map<Integer, List<String>> cache = new HashMap<>();
+
   public List<String> generateParenthesis(int n) {
-    Map<Integer, Set<String>> resultMap = new HashMap<>(64);
-    resultMap.put(1, Set.of("()"));
-    for (int i = 2; i <= n; i++) {
-      List<String> stringList = new ArrayList<>(resultMap.get(i - 1));
-      Set<String> parenthesisSet = new TreeSet<>();
-      for (String s : stringList) {
-        // how to improve it
-        for (int index = 0; index < s.length(); index++) {
-          parenthesisSet.add(s.substring(0, index + 1) + "()" + s.substring(index + 1));
+    if (cache.containsKey(n)) {
+      return cache.get(n);
+    }
+    if (n < 1) {
+      List<String> result = new ArrayList<>();
+      cache.put(n, result);
+      return result;
+    }
+    if (n == 1) {
+      List<String> result = new ArrayList<>(Collections.singletonList("()"));
+      cache.put(n, result);
+      return result;
+    }
+    List<String> stringList = generateParenthesis(n - 1);
+    Set<String> set = new HashSet<>();
+    for (String s : stringList) {
+      set.add("(" + s + ")");
+    }
+    for (int i = 1; i < n; i++) {
+      List<String> stringList1 = generateParenthesis(i);
+      List<String> stringList2 = generateParenthesis(n - i);
+      for (String s1 : stringList1) {
+        for (String s2 : stringList2) {
+          set.add(s1 + s2);
         }
       }
-      resultMap.put(i, parenthesisSet);
     }
-    return new ArrayList<>(resultMap.get(n));
+    List<String> result = new ArrayList<>(set);
+    cache.put(n, result);
+    return result;
   }
 
 }
