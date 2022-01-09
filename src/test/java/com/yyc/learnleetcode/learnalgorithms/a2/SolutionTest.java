@@ -38,4 +38,10 @@ class SolutionTest {
     assertEquals(expected, new Solution().addTwoNumbers(input1, input2));
   }
 
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  void addTwoNumbersSimpleTest(ListNode input1, ListNode input2, ListNode expected) {
+    assertEquals(expected, new Solution().addTwoNumbersSimple(input1, input2));
+  }
+
 }
