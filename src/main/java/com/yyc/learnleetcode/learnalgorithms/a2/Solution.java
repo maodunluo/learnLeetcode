@@ -1,7 +1,5 @@
 package com.yyc.learnleetcode.learnalgorithms.a2;
 
-import lombok.val;
-
 /**
  * 2. Add Two Numbers
  *
@@ -13,7 +11,7 @@ public class Solution {
     ListNode head = new ListNode(-1);
     ListNode cur = head;
     ListNode pre = new ListNode(0);
-    while(l1 != null && l2 != null) {
+    while (l1 != null && l2 != null) {
       val sum = l1.val + l2.val + pre.val;
       pre.val = 0;
       cur.next = l1;
@@ -40,7 +38,7 @@ public class Solution {
       }
       l1 = l1.next;
     }
-    while(l2 != null) {
+    while (l2 != null) {
       val sum = l2.val + pre.val;
       pre.val = 0;
       cur.next = l2;
