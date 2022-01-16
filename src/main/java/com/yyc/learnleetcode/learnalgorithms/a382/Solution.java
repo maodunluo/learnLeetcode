@@ -1,7 +1,5 @@
 package com.yyc.learnleetcode.learnalgorithms.a382;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -11,18 +9,27 @@ import java.util.Random;
  */
 public class Solution {
 
-  List<Integer> list;
+  ListNode node;
+  int size;
 
   public Solution(ListNode head) {
-    list = new ArrayList<>();
-    while (head != null) {
-      list.add(head.val);
-      head = head.next;
+    node = head;
+    ListNode cur = head;
+    size = 0;
+    while(cur != null){
+      size++;
+      cur = cur.next;
     }
   }
 
   public int getRandom() {
-    return list.get(new Random().nextInt(list.size()));
+    int i = new Random().nextInt(size);
+    ListNode p = this.node;
+    while (i > 0) {
+      p = p.next;
+      i--;
+    }
+    return p.val;
   }
 
 }
