@@ -1,12 +1,11 @@
 package com.yyc.learnleetcode.learnalgorithms.a590;
 
-import org.apache.commons.collections.CollectionUtils;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.List;
+import org.apache.commons.collections4.CollectionUtils;
 
 /**
  * @author yuechao
