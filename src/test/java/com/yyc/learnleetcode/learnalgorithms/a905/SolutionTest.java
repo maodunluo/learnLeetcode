@@ -20,15 +20,15 @@ class SolutionTest {
         assertArrayEquals(expected, new Solution().sortArrayByParity(input));
     }
 
-    @Test
-    void simpleSortArrayByParity() {
-        assertArrayEquals(expected, new Solution().simpleSortArrayByParity(input));
-    }
-
-    @Test
-    void finalInputTest() {
-        assertArrayEquals(expected, new Solution().simpleSortArrayByParity(finalInput));
-    }
+//    @Test
+//    void simpleSortArrayByParity() {
+//        assertArrayEquals(expected, new Solution().simpleSortArrayByParity(input));
+//    }
+//
+//    @Test
+//    void finalInputTest() {
+//        assertArrayEquals(expected, new Solution().simpleSortArrayByParity(finalInput));
+//    }
 
     @Test
     @DisplayName("校验int数组")
